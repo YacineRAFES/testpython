@@ -1,5 +1,5 @@
-from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QMainWindow, QPushButton, QApplication, QWidget
+from PySide6.QtGui import QIcon, QIntValidator, QFont
+from PySide6.QtWidgets import QMainWindow, QPushButton, QApplication, QWidget, QLineEdit
 import sys
 
 
@@ -25,6 +25,15 @@ class MyWindow(QMainWindow):
         self.__button2 = QPushButton("Second bouton", centralWidget)
         self.__button2.setGeometry(20, 60, 200, 35)
         self.__button2.clicked.connect(self.doSomething)
+
+        e1 = QLineEdit(centralWidget)
+        e1.setValidator(QIntValidator())
+        e1.setMaxLength(4)
+        e1.setAlignment(centralWidget.AlignRight)
+        e1.setFont(QFont("Arial",20))
+
+        flo = QFormLayout(centralWidget)
+        flo.addRow("integer validator",e1)
 
         # On injecte le composant en tant que "widget central".
         self.setCentralWidget(centralWidget)
