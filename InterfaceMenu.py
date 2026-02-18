@@ -14,6 +14,7 @@ class MyWindow(QMainWindow):
         central = QWidget()
         main_layout = QHBoxLayout(central)
 
+        # Supprime les espaces entre le box layout et la bordure de la fenetre
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
