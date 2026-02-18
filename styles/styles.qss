@@ -1,0 +1,39 @@
+QListWidget {
+    color: #000000;
+    background-color: #33373B;
+}
+
+QListWidget::item {
+    height: 50px;
+}
+
+QListWidget::item:selected {
+    background-color: #2ABf9E;
+}
+
+QLabel {
+    font-size:20px;
+}
+
+QHBoxLayout {
+    background-color: #000000;
+}
+
+QWidget {
+    padding: 0px;
+    margin: 0px;
+}
+
+QPushButton {
+    background-color: #2ABf9E;
+    padding: 20px;
+    font-size: 18px;
+    margin: 0px;
+    border-radius: 0px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
