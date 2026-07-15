@@ -1,0 +1,21 @@
+{
+  "name": "testpython",
+  "version": "0.1.0",
+  "description": "Découverte de Python - Calculatrice",
+  "main": "calculatrice.py",
+  "scripts": {
+    "release": "release-it",
+    "release:dry-run": "release-it --dry-run"
+  },
+  "keywords": [
+    "python",
+    "calculator",
+    "pyside6"
+  ],
+  "author": "YacineRAFES",
+  "license": "MIT",
+  "devDependencies": {
+    "release-it": "^17.0.0",
+    "@release-it/conventional-changelog": "^8.0.0"
+  }
+}

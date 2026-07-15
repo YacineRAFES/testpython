@@ -1,0 +1,37 @@
+{
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "Release v${version}"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}",
+    "releaseBody": "Automated release by release-it",
+    "assets": [
+      "dist/*"
+    ]
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md",
+      "header": "# Changelog",
+      "gitRawCommitsOpts": {
+        "path": "."
+      }
+    }
+  },
+  "hooks": {
+    "before:init": [
+      "npm install"
+    ],
+    "after:bump": "echo "Bumped version to ${version}"",
+    "after:release": "echo "Released ${version} successfully!"
+  },
+  "dryRun": false,
+  "verbose": true
+}
