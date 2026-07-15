@@ -29,8 +29,8 @@
     "before:init": [
       "npm install"
     ],
-    "after:bump": "echo "Bumped version to ${version}"",
-    "after:release": "echo "Released ${version} successfully!"
+    "after:bump": "echo \"Bumped version to ${version}\"",
+    "after:release": "echo \"Released ${version} successfully!\""
   },
   "dryRun": false,
   "verbose": true
